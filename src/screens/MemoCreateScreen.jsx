@@ -1,18 +1,14 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  TextInput,
-  KeyboardAvoidingView,
-} from 'react-native';
+import { View, StyleSheet, TextInput } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
 import AppBar from '../components/AppBar';
 import CircleButton from '../components/CircleButton';
+import KeyboardSafeView from '../components/KeyboardSafeView';
 
 export default function MemoCreateScreen() {
   return (
-    <KeyboardAvoidingView style={styles.container} behavior="height">
+    <KeyboardSafeView style={styles.container} behavior="height">
       <AppBar />
       <View style={styles.inputContainer}>
         <TextInput value="" multiline style={styles.input} />
@@ -20,7 +16,7 @@ export default function MemoCreateScreen() {
       <CircleButton>
         <AntDesign name="check" size={30} color="#fff" />
       </CircleButton>
-    </KeyboardAvoidingView>
+    </KeyboardSafeView>
   );
 }
 
