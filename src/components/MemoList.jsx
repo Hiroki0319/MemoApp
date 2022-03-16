@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+/* eslint-disable-next-line */
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 export default function MemoList() {
@@ -11,9 +12,9 @@ export default function MemoList() {
           <Text style={styles.memoListItemDate}>2022年00年00日 10:00</Text>
         </View>
         <View>
-          <Text style={styles.addButton}>
+          <TouchableOpacity style={styles.addButton}>
             <Feather name="x" size={18} color="#666s" />
-          </Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>

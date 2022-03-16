@@ -1,6 +1,12 @@
 import React from 'react';
 /* eslint-disable-next-line */
-import { View, Text, TextInput, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 
 import AppBar from '../components/AppBar';
 import Button from '../components/Button';
@@ -16,7 +22,9 @@ export default function SignUpScreen() {
         <Button label="submit" />
         <View style={styles.footer}>
           <Text style={styles.footerText}>Already registerd</Text>
-          <Text style={styles.footerLink}>Login</Text>
+          <TouchableOpacity>
+            <Text style={styles.footerLink}>Login</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
